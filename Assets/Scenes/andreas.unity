@@ -149,11 +149,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -100
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -183,6 +183,19 @@ Prefab:
       propertyPath: earth
       value: 
       objectReference: {fileID: 2135376103}
+    - target: {fileID: 21200000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fafc2fb6736c94cc6a22290245214c0f,
+        type: 3}
+    - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
   m_RootGameObject: {fileID: 339652717}
@@ -243,8 +256,8 @@ Transform:
   m_PrefabInternal: {fileID: 184165033}
   m_GameObject: {fileID: 339652717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 20, z: 10}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -200, y: 60, z: 10}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 874578969}
   m_RootOrder: 1
@@ -282,7 +295,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1f66b76669b14e0c95ca8d3665903b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fafc2fb6736c94cc6a22290245214c0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &382639772
 Prefab:
@@ -321,7 +334,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 66130c45ffd6b46e99d862df8dd94a0e,
+        type: 3}
+    - target: {fileID: 400000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
+      propertyPath: m_Radius
+      value: 2.4000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac0d223940bdb4bd1904e51b320149ff, type: 2}
@@ -763,7 +793,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .850000024
+  m_Radius: 2.4000001
   m_Center: {x: 0, y: 0}
 --- !u!114 &2135376103
 MonoBehaviour:
@@ -798,7 +828,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93810dd3ca0f24286b7b49084d83f985, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66130c45ffd6b46e99d862df8dd94a0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2135376105
 Transform:
@@ -808,7 +838,7 @@ Transform:
   m_GameObject: {fileID: 2135376101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.8979988, y: 3.61310005, z: 10}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 245203986}
   m_RootOrder: 0
