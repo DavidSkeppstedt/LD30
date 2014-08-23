@@ -40,7 +40,6 @@ public class DistanceToPlayer : MonoBehaviour {
 
 		Vector3 result = position - player.transform.position;
 		distance = Mathf.Abs (Mathf.Sqrt(result.x * result.x + result.y * result.y));
-		Debug.Log (player.rigidbody2D.velocity.magnitude);
 
 
 		if (distance > radius && escapeDistance > distance && !shoot && !left) {
@@ -57,7 +56,7 @@ public class DistanceToPlayer : MonoBehaviour {
 				controller.GetComponent<GameStatus>().inOrbit = true;
 				force = 0;
 
-				//cameraZoom.ZoomOut();
+				cameraZoom.ZoomOut();
 
 		
 			}
@@ -86,7 +85,7 @@ public class DistanceToPlayer : MonoBehaviour {
 			shoot = true;
 			force  = 0;
 			left = true;
-			//cameraZoom.ZoomIn();
+			cameraZoom.ZoomIn();
 
 		}
 

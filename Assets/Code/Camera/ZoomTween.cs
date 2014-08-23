@@ -23,9 +23,9 @@ public class ZoomTween : MonoBehaviour {
 		if (zoomOut && !zoomIn) {	
 			if (timer < 1) {
 				timer +=Time.deltaTime;
-				float x = Mathf.Lerp(100,300,timer);
+				float x = Mathf.Lerp(60,100,timer);
 				camera.orthographicSize = x;
-				background.UpdateBackground();
+
 			}else {
 				zoomOut = false;
 				timer = 0;
@@ -36,9 +36,9 @@ public class ZoomTween : MonoBehaviour {
 		if (zoomIn && !zoomOut) {	
 			if (timer2 < 1) {
 				timer2 +=Time.deltaTime;
-				float x = Mathf.Lerp(300,100,timer2);
+				float x = Mathf.Lerp(100,60,timer2);
 				camera.orthographicSize = x;
-				background.UpdateBackground();
+
 			}else {
 				zoomIn = false;
 				timer2 = 0;
