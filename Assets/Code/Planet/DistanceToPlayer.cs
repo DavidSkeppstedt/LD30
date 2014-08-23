@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class DistanceToPlayer : MonoBehaviour {
-
+	public ZoomTween cameraZoom;
+	public GameObject background;
+	public GameObject controller;
 	public GameObject player;
 	private float playerMass = 0;
 	public bool orbit = false;
@@ -11,15 +13,18 @@ public class DistanceToPlayer : MonoBehaviour {
 	private float G = 6.676f * Mathf.Pow (10, -11);
 	private float planetMass = 0;
 	private Vector3 position;
-	private float radius = 40;
-	private float escapeDistance = 100;
+	private float radius = 30;
+	private float escapeDistance = 200;
 	private bool rotate = false;
 	private bool shoot = false;
-
+	private bool left = false;
 
 	private float delay = 0;
 	// Use this for initialization
 	void Start () {
+		cameraZoom = Camera.main.GetComponent<ZoomTween> ();
+		background = GameObject.Find("Background");
+		controller = GameObject.Find("Controllers");
 		player = GameObject.FindWithTag("Player");
 		position = this.transform.position;
 		playerMass = player.rigidbody2D.mass;
@@ -30,23 +35,30 @@ public class DistanceToPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		transform.eulerAngles = new Vector3(0,0,transform.eulerAngles.z + 1);
 
 		Vector3 result = position - player.transform.position;
 		distance = Mathf.Abs (Mathf.Sqrt(result.x * result.x + result.y * result.y));
+		Debug.Log (player.rigidbody2D.velocity.magnitude);
 
 
-
-		if (distance > radius && escapeDistance > distance ) {
-						force = G * (playerMass*planetMass) /(distance*distance);
+		if (distance > radius && escapeDistance > distance && !shoot && !left) {
+						
+							force = G * (playerMass*planetMass) /(distance*distance) * 40;	
+						
+						
 						player.gameObject.rigidbody2D.AddForce (result * force);
 		} else {
 
-			if (distance < radius && !player.GetComponent<PlayerToggle>().inOrbit && !shoot) {
+			if (distance < radius && !controller.GetComponent<GameStatus>().inOrbit && !shoot) {
 				player.gameObject.rigidbody2D.velocity = new Vector3(0,0,0);
 				orbit = true;
-				player.GetComponent<PlayerToggle>().inOrbit = true;
+				controller.GetComponent<GameStatus>().inOrbit = true;
+				force = 0;
+
+				//cameraZoom.ZoomOut();
+
 		
 			}
 		}
@@ -63,15 +75,19 @@ public class DistanceToPlayer : MonoBehaviour {
 
 		if (Input.GetMouseButton(0) && orbit) {
 			orbit = false;
-			player.GetComponent<PlayerToggle>().inOrbit = false;
+			controller.GetComponent<GameStatus>().inOrbit = false;
 			player.transform.parent = null;
 			rotate = false;
 
 			Vector2 shotDirection = new Vector2(player.transform.right.x,player.transform.up.y);
 			Debug.Log(shotDirection);
 
-			player.rigidbody2D.AddForce(new Vector2(player.transform.right.x,player.transform.right.y) *10000000);
+			player.rigidbody2D.AddForce(new Vector2(player.transform.right.x,player.transform.right.y) *5000000);
 			shoot = true;
+			force  = 0;
+			left = true;
+			//cameraZoom.ZoomIn();
+
 		}
 
 		//Debug.DrawLine (player.transform.position, player.transform.forward);
@@ -81,6 +97,7 @@ public class DistanceToPlayer : MonoBehaviour {
 			if (delay > 2) {
 				shoot = false;
 				delay = 0;
+				force = 0;
 			}
 		}
 

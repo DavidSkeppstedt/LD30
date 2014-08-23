@@ -5,6 +5,7 @@ public class CreatePlanet : MonoBehaviour {
 
 	public GameObject planet;
 	public Sprite [] sprites;
+	public GameObject controller;
 	public GameObject player;
 	public GameObject spawnedPlanets;
 
@@ -15,7 +16,7 @@ public class CreatePlanet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetMouseButtonUp (1) && player.GetComponent<PlayerToggle>().inOrbit == false) {
+		if (Input.GetMouseButtonUp (1) && controller.GetComponent<GameStatus>().inOrbit == false) {
 
 			Vector3 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Vector3 playerPos= player.transform.position;

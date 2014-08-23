@@ -7,7 +7,7 @@ public class GameStatus : MonoBehaviour {
 
 	public static int tinyPlanetMax;
 	public static int bigPlanetMax;
-	
+	public bool inOrbit = false;
 	private static int tinyPlanetPlaced;
 	private static int bigPlanetPlaced; 
 

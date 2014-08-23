@@ -140,6 +140,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874578969}
   m_RootOrder: 0
+--- !u!1 &245203985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 245203986}
+  m_Layer: 0
+  m_Name: World
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245203986
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245203985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1543772177}
+  - {fileID: 1545410201}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1001 &719564732
 Prefab:
   m_ObjectHideFlags: 0
@@ -217,6 +246,7 @@ GameObject:
   - 124: {fileID: 874578966}
   - 81: {fileID: 874578965}
   - 114: {fileID: 874578970}
+  - 114: {fileID: 874578971}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -265,7 +295,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 80
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -284,7 +314,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874578964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9300003, y: -12.8249998, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 17263995}
@@ -302,6 +332,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1545410201}
+--- !u!114 &874578971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874578964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc142e2fd7754a6cae9f2596dd0223e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 17263993}
 --- !u!1 &1543772176
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +369,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 245203986}
+  m_RootOrder: 0
 --- !u!1 &1545410197
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +382,7 @@ GameObject:
   - 212: {fileID: 1545410200}
   - 50: {fileID: 1545410199}
   - 61: {fileID: 1545410198}
-  - 114: {fileID: 1545410203}
+  - 114: {fileID: 1545410202}
   m_Layer: 0
   m_Name: SpaceCraft
   m_TagString: Player
@@ -355,7 +397,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545410197}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a8749e2aa00e9416cba8c06311b926e0, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 10.2399998, y: 5.11999989}
   m_Center: {x: 0, y: 0}
@@ -406,9 +448,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 245203986}
   m_RootOrder: 1
---- !u!114 &1545410203
+--- !u!114 &1545410202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -416,10 +458,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545410197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221adeeb44fb149558d30495d6fc79fc, type: 3}
+  m_Script: {fileID: 11500000, guid: f5b325e35f53542e79b063f60a27d34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inOrbit: 0
+  gamestatus: {fileID: 1953052697}
 --- !u!1 &1953052693
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +478,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1953052694
 MonoBehaviour:
@@ -455,6 +497,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 53ae026f52eba46d4b3696a110985e7e, type: 3}
   - {fileID: 21300000, guid: 80a826e22acc341818d0caf2082b43ef, type: 3}
   - {fileID: 21300000, guid: 36302e08bb1034bfbad032f96fb3d628, type: 3}
+  controller: {fileID: 1953052693}
   player: {fileID: 1545410197}
   spawnedPlanets: {fileID: 0}
 --- !u!4 &1953052695
@@ -468,7 +511,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1953052696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,3 +534,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1813d72ad144d63a149d9333bed586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inOrbit: 0
