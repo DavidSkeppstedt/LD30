@@ -135,7 +135,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 80
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -171,101 +171,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1545410201}
---- !u!1 &1293625441
+--- !u!1 &1543772176
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1293625444}
-  - 212: {fileID: 1293625443}
-  - 58: {fileID: 1293625442}
-  - 114: {fileID: 1293625445}
-  - 50: {fileID: 1293625446}
+  - 4: {fileID: 1543772177}
   m_Layer: 0
-  m_Name: Planet
-  m_TagString: Planet
+  m_Name: SpawnedPlanets
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &1293625442
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293625441}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Radius: 2.55999994
-  m_Center: {x: 0, y: 0}
---- !u!212 &1293625443
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293625441}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 7174c2c5b4b574dcf9ef5517a59b5880, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1293625444
+--- !u!4 &1543772177
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293625441}
+  m_GameObject: {fileID: 1543772176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.54399991, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!114 &1293625445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293625441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7d118854a7949e3bcaeb31dd48a733, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1545410197}
-  orbit: 0
-  small: 0
-  force: 0
-  distance: 0
---- !u!50 &1293625446
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293625441}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_RootOrder: 3
 --- !u!1 &1545410197
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +209,7 @@ GameObject:
   - 212: {fileID: 1545410200}
   - 50: {fileID: 1545410199}
   - 61: {fileID: 1545410198}
+  - 114: {fileID: 1545410203}
   m_Layer: 0
   m_Name: SpaceCraft
   m_TagString: Player
@@ -293,7 +226,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .699999988, y: .699999988}
+  m_Size: {x: 10.2399998, y: 5.11999989}
   m_Center: {x: 0, y: 0}
 --- !u!50 &1545410199
 Rigidbody2D:
@@ -301,7 +234,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545410197}
-  m_Mass: 1e+06
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
@@ -330,7 +263,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 1b58ac7047ee14856895e0adcf9dbd09, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 8b3abce3623824ff7ba1f0d9bf52cd89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1545410201
 Transform:
@@ -339,8 +272,67 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545410197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9319992, y: -12.9750004, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1545410203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545410197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221adeeb44fb149558d30495d6fc79fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inOrbit: 0
+--- !u!1 &1953052693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1953052695}
+  - 114: {fileID: 1953052694}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1953052694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953052693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a78dfeb50154e378b338ca94ea1b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: {fileID: 100000, guid: 3821315a8ad4d413bb2669aad115f592, type: 2}
+  sprites:
+  - {fileID: 21300004, guid: 7174c2c5b4b574dcf9ef5517a59b5880, type: 3}
+  - {fileID: 21300000, guid: 53ae026f52eba46d4b3696a110985e7e, type: 3}
+  - {fileID: 21300000, guid: 80a826e22acc341818d0caf2082b43ef, type: 3}
+  - {fileID: 21300000, guid: 36302e08bb1034bfbad032f96fb3d628, type: 3}
+  player: {fileID: 1545410197}
+  spawnedPlanets: {fileID: 0}
+--- !u!4 &1953052695
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953052693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
