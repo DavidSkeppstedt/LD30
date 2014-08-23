@@ -6,7 +6,8 @@ public class Statemanager : MonoBehaviour {
 	public enum states{
 		MENU,
 		PLAY,
-		DEAD
+		DEAD,
+		WIN
 	};
 
 	public static states STATE;
@@ -30,6 +31,9 @@ public class Statemanager : MonoBehaviour {
 			//PLAY		
 		}else if(STATE == states.DEAD){
 			//DEAD
+		}else if(STATE == states.WIN){
+			//WIN
+			print("win");
 		}
 
 	}
