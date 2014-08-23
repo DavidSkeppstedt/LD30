@@ -17,7 +17,7 @@ public class Compass : MonoBehaviour {
 
 		float dx = transform.position.x-Target.x;
 		float dy = transform.position.y-Target.y;
-		float degrees = Mathf.Atan2(dy,dx)* Mathf.Rad2Deg+180;
+		float degrees = Mathf.Atan2(dy,dx)* Mathf.Rad2Deg;
 		transform.localEulerAngles = new Vector3 (0, 0, degrees);;
 
 	}
