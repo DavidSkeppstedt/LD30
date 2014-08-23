@@ -26,7 +26,7 @@ public class Asteroids : MonoBehaviour {
 		size = Random.Range (20, 50); 
 		
 		
-		startPos = new Vector2( Random.Range (-2000, 2000), Random.Range (-2000, 2000));
+		startPos = new Vector2( Random.Range (-4000, 4000), Random.Range (-4000, 4000));
 		
 		if (Random.Range (0, 2) == 1) {
 			//X 
