@@ -9,8 +9,8 @@ public class Earth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		posX = 100; //Random the position
-		posY = 100; //Random the position 
+		posX = Random.Range(-1000,1000); //Random the position
+		posY = Random.Range(-1000,1000); //Random the position 
 
 		this.transform.position = new Vector2 (posX, posY);
 
