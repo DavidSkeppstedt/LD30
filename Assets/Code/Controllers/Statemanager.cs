@@ -31,6 +31,7 @@ public class Statemanager : MonoBehaviour {
 			//PLAY		
 		}else if(STATE == states.DEAD){
 			//DEAD
+			print("dead");
 		}else if(STATE == states.WIN){
 			//WIN
 			print("win");
@@ -42,5 +43,6 @@ public class Statemanager : MonoBehaviour {
 	//Do all the reset here
 	public static void reset(){
 		GameStatus.reset();
+		Asteroids.reset();
 	}
 }
