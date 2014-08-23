@@ -6,7 +6,8 @@ public class ScrollStarfield : MonoBehaviour {
 	public GameObject player;
 	// Use this for initialization
 	void Start () {
-	
+		GetComponent<ParticleSystem> ().renderer.sortingLayerName = "BackgroundLayer";
+		GetComponent<ParticleSystem> ().renderer.sortingOrder = 1;
 	}
 	
 	// Update is called once per frame
