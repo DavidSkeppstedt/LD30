@@ -31,6 +31,7 @@ public class Statemanager : MonoBehaviour {
 			//PLAY		
 		}else if(STATE == states.DEAD){
 			//DEAD
+			print("dead");
 		}else if(STATE == states.WIN){
 			//WIN
 			print("win");
