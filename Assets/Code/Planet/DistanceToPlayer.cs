@@ -13,8 +13,8 @@ public class DistanceToPlayer : MonoBehaviour {
 	private float G = 6.676f * Mathf.Pow (10, -11);
 	private float planetMass = 0;
 	private Vector3 position;
-	private float radius = 30;
-	private float escapeDistance = 200;
+	private float radius = 50;
+	private float escapeDistance = 100;
 	private bool rotate = false;
 	private bool shoot = false;
 	private bool left = false;
