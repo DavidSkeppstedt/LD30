@@ -18,7 +18,7 @@ public class DistanceToPlayer : MonoBehaviour {
 	private bool rotate = false;
 	private bool shoot = false;
 	private bool left = false;
-
+	private float forceMulti = 40;
 	private float delay = 0;
 	// Use this for initialization
 	void Start () {
@@ -36,18 +36,27 @@ public class DistanceToPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+
+
+		if (player == null) {
+			return;
+		}
+
+
 		transform.eulerAngles = new Vector3(0,0,transform.eulerAngles.z + 1);
 
 		Vector3 result = position - player.transform.position;
 		distance = Mathf.Abs (Mathf.Sqrt(result.x * result.x + result.y * result.y));
 
 
-		if (distance > radius && escapeDistance > distance && !shoot && !left) {
-						
-							force = G * (playerMass*planetMass) /(distance*distance) * 40;	
-						
-						
-						player.gameObject.rigidbody2D.AddForce (result * force);
+		if (distance > radius && escapeDistance > distance && !shoot) {
+							
+						if (!controller.GetComponent<GameStatus>().inOrbit) {
+							force = G * (playerMass*planetMass) /(distance*distance) * forceMulti;	
+							player.gameObject.rigidbody2D.AddForce (result * force);
+						}
+
 		} else {
 
 			if (distance < radius && !controller.GetComponent<GameStatus>().inOrbit && !shoot) {
@@ -79,13 +88,24 @@ public class DistanceToPlayer : MonoBehaviour {
 			rotate = false;
 
 			Vector2 shotDirection = new Vector2(player.transform.right.x,player.transform.up.y);
-			Debug.Log(shotDirection);
+			//Debug.Log(shotDirection);
 
 			player.rigidbody2D.AddForce(new Vector2(player.transform.right.x,player.transform.right.y) *5000000);
 			shoot = true;
 			force  = 0;
 			left = true;
 			cameraZoom.ZoomIn();
+
+
+
+			if (GameStatus.planetList.Count >2) {
+				GameObject g = GameStatus.planetList[0] as GameObject;
+				GameStatus.planetList.RemoveAt(0);
+				Destroy(g);
+
+			}
+
+
 
 		}
 
@@ -96,7 +116,7 @@ public class DistanceToPlayer : MonoBehaviour {
 			if (delay > 2) {
 				shoot = false;
 				delay = 0;
-				force = 0;
+				forceMulti *=0.5f; 
 			}
 		}
 

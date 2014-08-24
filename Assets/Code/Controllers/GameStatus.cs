@@ -4,23 +4,25 @@ using System.Collections;
 public class GameStatus : MonoBehaviour {
 
 	private static bool alive; 
-
+	public static ArrayList planetList;
 	public static int tinyPlanetMax;
 	public static int bigPlanetMax;
 	public bool inOrbit = false;
-	private static int tinyPlanetPlaced;
-	private static int bigPlanetPlaced; 
+	public static int tinyPlanetPlaced;
+	public static int bigPlanetPlaced; 
 
 	private static int fuel; //100% max 
 
 	// Use this for initialization
 	void Start () {
+		planetList = new ArrayList ();
+		bigPlanetMax = 4;
 		reset ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		GameStatus.bigPlanetPlaced = GameStatus.planetList.Count;
 	}
 
 	public static void setAlive(bool a){
@@ -47,7 +49,8 @@ public class GameStatus : MonoBehaviour {
 		if (bigPlanetPlaced + 1 > bigPlanetMax) {
 			return false;
 		} else {
-			bigPlanetMax++;
+			bigPlanetPlaced++;
+
 			return true; 
 		}
 	}

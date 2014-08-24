@@ -11,6 +11,7 @@ public class ShipMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gamestatus.inOrbit) {
+			rigidbody2D.velocity = Vector2.zero;
 			if (Input.GetKey(KeyCode.A)) {
 				transform.eulerAngles = new Vector3(0,0,transform.eulerAngles.z -2);
 

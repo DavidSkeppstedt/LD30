@@ -2728,7 +2728,6 @@ GameObject:
   - 50: {fileID: 1545410199}
   - 61: {fileID: 1545410198}
   - 114: {fileID: 1545410202}
-  - 95: {fileID: 1545410203}
   m_Layer: 0
   m_Name: SpaceCraft
   m_TagString: Player
@@ -2808,21 +2807,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamestatus: {fileID: 1953052697}
---- !u!95 &1545410203
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545410197}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1694190598f8a466c9370c0507ca95c6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1572469317
 GameObject:
   m_ObjectHideFlags: 0

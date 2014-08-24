@@ -12,7 +12,12 @@ public class ScrollStarfield : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (player.rigidbody2D.velocity.y);
+
+		if (player == null) {
+			return;
+		}
+		//Debug.Log (player.rigidbody2D.velocity);
+
 		transform.position = new Vector2 (transform.position.x + -PosOrNeg(player.rigidbody2D.velocity.x) , transform.position.y + -PosOrNeg(player.rigidbody2D.velocity.y));
 
 		if (transform.position.x +250< Camera.main.ViewportToWorldPoint (new Vector3(0,0,0)).x) {
