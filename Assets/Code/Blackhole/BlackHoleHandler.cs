@@ -5,7 +5,7 @@ public class BlackHoleHandler : MonoBehaviour {
 
 	private GameObject go;
 	public GameObject prefab;
-	private int amount = 90; 
+	private int amount = 200; 
 	Vector2 pos; 
 
 	private GameObject spaceCraft; 
@@ -35,7 +35,7 @@ public class BlackHoleHandler : MonoBehaviour {
 		do{
 			x = (int)Random.Range (spaceCraftX,spaceCraftX + 3000);
 			y = (int)Random.Range (spaceCraftY,3000);
-		}while(Mathf.Sqrt(x*x+y*y) <= 400);
+		}while(Mathf.Sqrt(x*x+y*y) <= 100);
 
 
 		if(Random.Range(0,2)==1){
