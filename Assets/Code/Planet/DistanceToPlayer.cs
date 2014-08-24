@@ -27,7 +27,7 @@ public class DistanceToPlayer : MonoBehaviour {
 		cameraZoom = Camera.main.GetComponent<ZoomTween> ();
 		background = GameObject.Find("Background");
 		controller = GameObject.Find("Controllers");
-		soundManager = controller.GetComponent<SoundManager> ();
+		soundManager = GameObject.Find("SoundController").GetComponent<SoundManager> ();
 		player = GameObject.FindWithTag("Player");
 		position = this.transform.position;
 		flameEmitter = GameObject.Find ("Flame").GetComponent<FlameEmitter> ();

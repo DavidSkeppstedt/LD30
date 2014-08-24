@@ -13,7 +13,7 @@ public class Asteroid : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spaceCraft = GameObject.Find ("SpaceCraft");
-		manager = GameObject.Find("Controllers").GetComponent<SoundManager>();
+		manager = GameObject.Find("SoundController").GetComponent<SoundManager>();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
 		sr.sprite = spriteAsteroid [Random.Range(0,spriteAsteroid.Length)];
 
