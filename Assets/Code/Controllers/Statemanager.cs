@@ -52,9 +52,7 @@ public class Statemanager : MonoBehaviour {
 			gameOverButton.SetActive(true);
 			gameOverText.SetActive(true);
 			
-			if(Input.GetKeyUp(KeyCode.R)){
-				reset ();
-			}
+
 		}else if(STATE == states.WIN){
 			//WIN
 			player.SetActive(false);

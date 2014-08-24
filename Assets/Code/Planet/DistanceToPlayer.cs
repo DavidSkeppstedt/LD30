@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class DistanceToPlayer : MonoBehaviour {
+	private SoundManager soundManager;
 	public ZoomTween cameraZoom;
 	public GameObject background;
 	public GameObject controller;
@@ -25,6 +26,7 @@ public class DistanceToPlayer : MonoBehaviour {
 		cameraZoom = Camera.main.GetComponent<ZoomTween> ();
 		background = GameObject.Find("Background");
 		controller = GameObject.Find("Controllers");
+		soundManager = controller.GetComponent<SoundManager> ();
 		player = GameObject.FindWithTag("Player");
 		position = this.transform.position;
 
@@ -88,6 +90,7 @@ public class DistanceToPlayer : MonoBehaviour {
 
 
 		if (Input.GetMouseButton(0) && orbit && GameStatus.getFuel() >= 20) {
+			soundManager.PlayFly();
 			orbit = false;
 			controller.GetComponent<GameStatus>().inOrbit = false;
 			player.transform.parent = null;

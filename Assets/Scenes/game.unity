@@ -391,7 +391,7 @@ ParticleSystem:
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 2
+      minMaxState: 0
     startSize:
       scalar: 1
       maxCurve:
@@ -1348,11 +1348,11 @@ Prefab:
         type: 3}
     - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 370de775d319b4d839849bfc40930aa3, type: 2}
@@ -1484,7 +1484,7 @@ Transform:
   m_GameObject: {fileID: 339652717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -50, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 874578969}
   m_RootOrder: 2
@@ -1885,11 +1885,11 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minColor:
         serializedVersion: 2
-        rgba: 4278255590
+        rgba: 4294967295
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 2
+      minMaxState: 0
     startSize:
       scalar: 1.20000005
       maxCurve:
@@ -3348,7 +3348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1123430215
 Transform:
   m_ObjectHideFlags: 0
@@ -3771,11 +3771,11 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minColor:
         serializedVersion: 2
-        rgba: 4278255590
+        rgba: 4294967295
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 2
+      minMaxState: 0
     startSize:
       scalar: 1
       maxCurve:
@@ -5030,7 +5030,7 @@ ParticleSystem:
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 2
+      minMaxState: 0
     startSize:
       scalar: 1
       maxCurve:
@@ -5925,7 +5925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1869322877
 Renderer:
   m_ObjectHideFlags: 0
@@ -6042,6 +6042,8 @@ GameObject:
   - 114: {fileID: 1953052694}
   - 114: {fileID: 1953052697}
   - 114: {fileID: 1953052696}
+  - 114: {fileID: 1953052699}
+  - 82: {fileID: 1953052698}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -6105,6 +6107,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inOrbit: 0
+--- !u!82 &1953052698
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953052693}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &1953052699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953052693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3428e84c087a34d45858f6f7022d33e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 8300000, guid: 9da3e96db2a6f4678a8d97fd79761007, type: 3}
+  fly: {fileID: 8300000, guid: 1e56ffbad7c094c60878cb1f91979bc7, type: 3}
 --- !u!1 &2072159830
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,7 +6195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2072159831
 Transform:
   m_ObjectHideFlags: 0
@@ -6354,7 +6427,7 @@ ParticleSystem:
       maxColor:
         serializedVersion: 2
         rgba: 4294967295
-      minMaxState: 2
+      minMaxState: 0
     startSize:
       scalar: .800000012
       maxCurve:

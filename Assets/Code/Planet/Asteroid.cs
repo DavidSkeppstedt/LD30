@@ -4,7 +4,7 @@ using System.Collections;
 public class Asteroid : MonoBehaviour {
 
 	public Sprite[] spriteAsteroid; 
-
+	private SoundManager manager;
 	private GameObject spaceCraft;  
 	private GameObject go; 
 	public GameObject prefab; 
@@ -13,7 +13,7 @@ public class Asteroid : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spaceCraft = GameObject.Find ("SpaceCraft");
-
+		manager = GameObject.Find("Controllers").GetComponent<SoundManager>();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
 		sr.sprite = spriteAsteroid [Random.Range(0,spriteAsteroid.Length)];
 
@@ -39,7 +39,11 @@ public class Asteroid : MonoBehaviour {
 			go.particleSystem.renderer.sortingOrder = 5; 
 			go.particleSystem.Play(true); 
 			spaceCraft.SetActive(false);
+			if (GameStatus.isAlive()) {
+				GameStatus.setAlive(false);
+				manager.PlayExplosion();
 
+			}
 			Statemanager.STATE = Statemanager.states.DEAD;
 		}
 	}

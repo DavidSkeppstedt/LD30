@@ -39,7 +39,7 @@ public class Blackhole : MonoBehaviour {
 
 
 
-		if (distance < 50) {
+		if (distance < 75) {
 			player.rigidbody2D.AddForce(result * 20000);
 			Debug.Log("True");
 		}
