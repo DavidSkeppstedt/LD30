@@ -20,7 +20,7 @@ public class Blackhole : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!gamestatus.inOrbit && Statemanager.STATE == Statemanager.states.MENU)
+		if (!gamestatus.inOrbit && Statemanager.STATE == Statemanager.states.PLAY)
 			gravitationOnPlayer ();
 
 

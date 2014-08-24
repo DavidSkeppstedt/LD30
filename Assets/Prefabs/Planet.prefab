@@ -69,6 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d118854a7949e3bcaeb31dd48a733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraZoom: {fileID: 0}
+  background: {fileID: 0}
+  controller: {fileID: 0}
   player: {fileID: 0}
   orbit: 0
   force: 0

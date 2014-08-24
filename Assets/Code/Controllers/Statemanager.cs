@@ -28,6 +28,10 @@ public class Statemanager : MonoBehaviour {
 		gameOverText.SetActive (false);
 		winText.SetActive (false);
 
+
+
+
+
 	}
 
 
@@ -35,8 +39,13 @@ public class Statemanager : MonoBehaviour {
 	void Update () {
 		if(STATE == states.MENU){
 			//MENU
+
+			Time.timeScale = 0;
+
+
 		}else if(STATE == states.PLAY){
 			//PLAY		
+			Time.timeScale = 1;
 		}else if(STATE == states.DEAD){
 			//DEAD
 

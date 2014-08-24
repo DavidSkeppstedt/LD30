@@ -16,17 +16,13 @@ public class CreatePlanet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Debug.Log (GameStatus.bigPlanetPlaced);
-		if (player == null) {
+		if (player == null || Statemanager.STATE != Statemanager.states.PLAY) {
 			return;
 		}
 
 
 		if (Input.GetMouseButtonUp (1) && controller.GetComponent<GameStatus>().inOrbit == false) {
 			if (GameStatus.placeBigPlanet()) {
-
-
-
-
 
 				Vector3 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				Vector3 playerPos= player.transform.position;

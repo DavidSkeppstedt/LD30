@@ -27,6 +27,12 @@ public class DistanceToPlayer : MonoBehaviour {
 		controller = GameObject.Find("Controllers");
 		player = GameObject.FindWithTag("Player");
 		position = this.transform.position;
+
+
+		if (player == null) {
+			return;
+		}
+
 		playerMass = player.rigidbody2D.mass;
 		planetMass = 1000*Mathf.Pow (10, 10);
 
@@ -65,8 +71,8 @@ public class DistanceToPlayer : MonoBehaviour {
 				controller.GetComponent<GameStatus>().inOrbit = true;
 				force = 0;
 
-				cameraZoom.ZoomOut();
-
+				//cameraZoom.ZoomOut();
+				Camera.main.GetComponent<FollowPlayer>().enabled = false;
 		
 			}
 		}
@@ -94,8 +100,8 @@ public class DistanceToPlayer : MonoBehaviour {
 			shoot = true;
 			force  = 0;
 			left = true;
-			cameraZoom.ZoomIn();
-
+			//cameraZoom.ZoomIn();
+			Camera.main.GetComponent<FollowPlayer>().enabled = true;
 
 
 			if (GameStatus.planetList.Count >2) {
