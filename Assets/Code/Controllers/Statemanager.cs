@@ -70,6 +70,6 @@ public class Statemanager : MonoBehaviour {
 	//Do all the reset here
 	public static void reset(){
 		GameStatus.reset();
-		Application.LoadLevel (0);
+		Application.LoadLevel ("game");
 	}
 }
