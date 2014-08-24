@@ -7976,7 +7976,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461063811}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
   m_LocalPosition: {x: -4.96420002, y: .289189994, z: -4.01509993e-07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9177,6 +9177,7 @@ GameObject:
   - 50: {fileID: 1545410199}
   - 61: {fileID: 1545410198}
   - 114: {fileID: 1545410202}
+  - 114: {fileID: 1545410203}
   m_Layer: 0
   m_Name: SpaceCraft
   m_TagString: Player
@@ -9257,6 +9258,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamestatus: {fileID: 1953052697}
+--- !u!114 &1545410203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545410197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c61e7f73b127e4aa23a3ae118683d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 100000, guid: ec8b9fcf36069794e81bc5bba3a4cefa, type: 2}
 --- !u!1 &1572469317
 GameObject:
   m_ObjectHideFlags: 0
