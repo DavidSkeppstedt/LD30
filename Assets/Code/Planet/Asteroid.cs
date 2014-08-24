@@ -3,12 +3,23 @@ using System.Collections;
 
 public class Asteroid : MonoBehaviour {
 
+	public Sprite[] spriteAsteroid; 
+
 	private GameObject spaceCraft;  
 	private GameObject go; 
 	public GameObject prefab; 
+
+	private SpriteRenderer sr;
 	// Use this for initialization
 	void Start () {
 		spaceCraft = GameObject.Find ("SpaceCraft");
+
+		sr = gameObject.GetComponent<SpriteRenderer> ();
+		sr.sprite = spriteAsteroid [Random.Range(0,spriteAsteroid.Length)];
+
+		float scale = Random.Range (1f,4f);
+
+		this.transform.localScale = new Vector3 (scale,scale,1);
 	
 	}
 	

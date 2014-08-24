@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,7 +55,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .899999976
+  m_Radius: 2.5
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -68,6 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55985e4951c834e53834cdbd8c562a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteAsteroid:
+  - {fileID: 21300000, guid: 2c953d72d90154cd6bcc197c7965eb31, type: 3}
+  - {fileID: 21300000, guid: b03d91e8108324b3d9330ba9b1185f4e, type: 3}
+  - {fileID: 21300000, guid: 4dd76c85799fe45f6be9ee540ff483dc, type: 3}
   prefab: {fileID: 100000, guid: 8bdfef533fa6742a8bd7b8b072b06002, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:

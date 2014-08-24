@@ -87,7 +87,7 @@ public class DistanceToPlayer : MonoBehaviour {
 
 
 
-		if (Input.GetMouseButton(0) && orbit) {
+		if (Input.GetMouseButton(0) && orbit && GameStatus.getFuel() >= 20) {
 			orbit = false;
 			controller.GetComponent<GameStatus>().inOrbit = false;
 			player.transform.parent = null;
@@ -111,8 +111,12 @@ public class DistanceToPlayer : MonoBehaviour {
 
 			}
 
+			GameStatus.setFuel((GameStatus.getFuel()-20));
 
 
+		}else if(GameStatus.getFuel() <= 0 && Input.GetMouseButton(0) && orbit){
+			print("no fuel"); 
+			Statemanager.STATE = Statemanager.states.DEAD;
 		}
 
 		//Debug.DrawLine (player.transform.position, player.transform.forward);
