@@ -6,7 +6,7 @@ public class Statemanager : MonoBehaviour {
 	private GameObject gameOverText;  
 	private GameObject winText;  
 	private GameObject player; 
-	
+	public GameObject gameOverButton;
 	public enum states{
 		MENU,
 		PLAY,
@@ -27,7 +27,7 @@ public class Statemanager : MonoBehaviour {
 		player = GameObject.Find ("SpaceCraft");
 		gameOverText.SetActive (false);
 		winText.SetActive (false);
-
+		gameOverButton.SetActive (false);
 
 
 
@@ -49,7 +49,7 @@ public class Statemanager : MonoBehaviour {
 		}else if(STATE == states.DEAD){
 			//DEAD
 
-
+			gameOverButton.SetActive(true);
 			gameOverText.SetActive(true);
 			
 			if(Input.GetKeyUp(KeyCode.R)){

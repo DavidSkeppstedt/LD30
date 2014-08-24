@@ -15,7 +15,7 @@ public class CreatePlanet : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (GameStatus.bigPlanetPlaced);
+
 		if (player == null || Statemanager.STATE != Statemanager.states.PLAY) {
 			return;
 		}

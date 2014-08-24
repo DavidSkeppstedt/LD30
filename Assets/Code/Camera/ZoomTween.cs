@@ -54,12 +54,12 @@ public class ZoomTween : MonoBehaviour {
 
 	public void ZoomIn() {
 		zoomIn = true;
-		camera.GetComponent<FollowPlayer>().enabled = true;
+		//camera.GetComponent<FollowPlayer>().enabled = true;
 	}
 
 	public void ZoomOut() {
 		zoomOut = true;
-		camera.GetComponent<FollowPlayer>().enabled = false;
+		//camera.GetComponent<FollowPlayer>().enabled = false;
 	}
 
 
