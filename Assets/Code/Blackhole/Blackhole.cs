@@ -52,9 +52,9 @@ public class Blackhole : MonoBehaviour {
 
 	}
 
-
-
-
+	public Vector3 getPos(){
+		return this.transform.position;
+	}
 
 }
 
