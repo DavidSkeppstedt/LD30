@@ -18,7 +18,7 @@ public class Statemanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+	
 
 	}
 
@@ -32,9 +32,13 @@ public class Statemanager : MonoBehaviour {
 		}else if(STATE == states.DEAD){
 			//DEAD
 			print("dead");
+		
+			reset ();
 		}else if(STATE == states.WIN){
 			//WIN
 			print("win");
+		
+			reset();
 		}
 
 	}
@@ -43,6 +47,6 @@ public class Statemanager : MonoBehaviour {
 	//Do all the reset here
 	public static void reset(){
 		GameStatus.reset();
-		Asteroids.reset();
+		Application.LoadLevel (0);
 	}
 }
