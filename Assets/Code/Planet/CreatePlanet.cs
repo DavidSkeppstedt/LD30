@@ -51,9 +51,12 @@ public class CreatePlanet : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp (1) && controller.GetComponent<GameStatus> ().inOrbit) {
 			if (GameStatus.planetList.Count > 1){
+
 				GameObject g = GameStatus.planetList[0] as GameObject;
-				GameStatus.planetList.RemoveAt(0);
-				Destroy(g);
+				if (g != player.transform.parent.gameObject) {
+					GameStatus.planetList.RemoveAt(0);
+					Destroy(g);
+				}
 			}
 		}
 

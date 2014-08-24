@@ -3804,8 +3804,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230, y: -20}
-  m_SizeDelta: {x: 130, y: 30}
+  m_AnchoredPosition: {x: 407, y: -22}
+  m_SizeDelta: {x: 180, y: 33}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &723686207
 MonoBehaviour:
@@ -3832,18 +3832,18 @@ MonoBehaviour:
   m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6470cbe326eec4ab1a5d2e25ea3a287f, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Fuel
+  m_Text: 'Fuel 100
 
 '
 --- !u!222 &723686209
@@ -6654,13 +6654,13 @@ MonoBehaviour:
   m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6470cbe326eec4ab1a5d2e25ea3a287f, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -6686,8 +6686,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73, y: -18.5699997}
-  m_SizeDelta: {x: 150, y: 30}
+  m_AnchoredPosition: {x: 147.860001, y: -19}
+  m_SizeDelta: {x: 288, y: 60}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1017885688
 MonoBehaviour:
@@ -8020,7 +8020,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461063811}
-  lengthInSec: .25
+  lengthInSec: .150000006
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -8031,7 +8031,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1.20000005
+      scalar: .800000012
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11923,12 +11923,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2072159830}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b211f27799b404d9892984ead503988f, type: 3}
+  m_Script: {fileID: 11500000, guid: e0f5a6ab40d3c419490f3757e4586538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!199 &2072159833
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
