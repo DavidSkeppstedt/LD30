@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ship : MonoBehaviour {
+public class Fuel : MonoBehaviour {
+
 
 	// Use this for initialization
 	void Start () {
@@ -10,10 +11,6 @@ public class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-
-	public void reset(){
-		this.transform.position = new Vector3 (0, 0, 0);
+		gameObject.GetComponent<UnityEngine.UI.Text> ().text = "Fuel: "+GameStatus.getFuel ();
 	}
 }
