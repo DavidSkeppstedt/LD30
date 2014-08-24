@@ -33,12 +33,16 @@ public class Statemanager : MonoBehaviour {
 			//DEAD
 			print("dead");
 		
-			reset ();
+			if(Input.GetKeyUp(KeyCode.R)){
+				reset ();
+			}
 		}else if(STATE == states.WIN){
 			//WIN
 			print("win");
 		
-			reset();
+			if(Input.GetKeyUp(KeyCode.R)){
+				reset ();
+			}
 		}
 
 	}
