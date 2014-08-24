@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Asteroids : MonoBehaviour {
 
+
 	private Vector2 startPos, endPos;
 	private int size;
 	private GameObject go;

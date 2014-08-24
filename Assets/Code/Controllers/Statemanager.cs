@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Statemanager : MonoBehaviour {
 
+	private GameObject gameOverText;  
+	private GameObject winText;  
+	private GameObject player; 
+	
 	public enum states{
 		MENU,
 		PLAY,
@@ -18,7 +22,11 @@ public class Statemanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		gameOverText = GameObject.Find ("GameOver");
+		winText = GameObject.Find ("Win");
+		player = GameObject.Find ("SpaceCraft");
+		gameOverText.SetActive (false);
+		winText.SetActive (false);
 
 	}
 
@@ -31,14 +39,18 @@ public class Statemanager : MonoBehaviour {
 			//PLAY		
 		}else if(STATE == states.DEAD){
 			//DEAD
-			print("dead");
-		
+
+
+			gameOverText.SetActive(true);
+			
 			if(Input.GetKeyUp(KeyCode.R)){
 				reset ();
 			}
 		}else if(STATE == states.WIN){
 			//WIN
-			print("win");
+			player.SetActive(false);
+
+			winText.SetActive(true);
 		
 			if(Input.GetKeyUp(KeyCode.R)){
 				reset ();
