@@ -136,7 +136,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Lost in space you have to travel back to Earth.\n\nAvoid black holes and
     asteriods. \n\nUse left mouse to place planets and right to remove.\nA&D to rotate
-    ship while in orbit. \n\nPRESS,\nSPACE TO CONTINUE"
+    ship while in orbit. \n\nPRESS,\nSPACE TO CONTINUE\n\nMADE FOR LD30 -\"Connected
+    Worlds\""
 --- !u!222 &245186700
 CanvasRenderer:
   m_ObjectHideFlags: 0
