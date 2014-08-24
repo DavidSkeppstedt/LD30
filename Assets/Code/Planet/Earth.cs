@@ -4,7 +4,7 @@ using System.Collections;
 public class Earth : MonoBehaviour {
 
 	private float posX, posY;
-
+	public SoundManager manager;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,7 @@ public class Earth : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision){
 		if(collision.collider.name.Equals("SpaceCraft")){
 			Statemanager.STATE = Statemanager.states.WIN;
+			manager.PlayVictory();
 		}
 	}
 

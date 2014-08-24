@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class DistanceToPlayer : MonoBehaviour {
+	private FlameEmitter flameEmitter;
 	private SoundManager soundManager;
 	public ZoomTween cameraZoom;
 	public GameObject background;
@@ -15,7 +16,7 @@ public class DistanceToPlayer : MonoBehaviour {
 	private float planetMass = 0;
 	private Vector3 position;
 	private float radius = 50;
-	private float escapeDistance = 100;
+	private float escapeDistance = 150;
 	private bool rotate = false;
 	private bool shoot = false;
 	private bool left = false;
@@ -29,7 +30,7 @@ public class DistanceToPlayer : MonoBehaviour {
 		soundManager = controller.GetComponent<SoundManager> ();
 		player = GameObject.FindWithTag("Player");
 		position = this.transform.position;
-
+		flameEmitter = GameObject.Find ("Flame").GetComponent<FlameEmitter> ();
 
 		if (player == null) {
 			return;
@@ -115,7 +116,7 @@ public class DistanceToPlayer : MonoBehaviour {
 			}
 
 			GameStatus.setFuel((GameStatus.getFuel()-20));
-
+			flameEmitter.PlayParticle();
 
 		}else if(GameStatus.getFuel() <= 0 && Input.GetMouseButton(0) && orbit){
 			print("no fuel"); 

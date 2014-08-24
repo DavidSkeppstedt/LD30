@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour {
 
-	public AudioClip explosion, fly;
+	public AudioClip explosion, fly,victory;
 	private AudioSource player;
 
 	void Start() {
@@ -17,6 +17,10 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlayFly() {
 		play (fly);
+	}
+
+	public void PlayVictory() {
+		play (victory);
 	}
 
 
