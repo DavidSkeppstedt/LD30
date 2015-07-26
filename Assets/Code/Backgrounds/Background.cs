@@ -31,12 +31,6 @@ public class Background : MonoBehaviour {
 		yHeight.y=worldScreenHeight / height;
 		transform.localScale=yHeight;
 
-
-
-
-
-
-
 		for(int i = 0;i < stars; i++ ){
 			pos = new Vector3(Random.Range(0,Screen.width),Random.Range(0,Screen.height),0);
 			go = Instantiate (prefab, Camera.main.ScreenToWorldPoint(pos), Quaternion.identity) as GameObject;
